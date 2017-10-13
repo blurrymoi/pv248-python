@@ -58,7 +58,7 @@ class Score(DBItem):
     def __init__(self, conn):
         super().__init__(conn)
         self.genre = self.key = self.incipit = self.year = None
-        self.edition = None
+        self.edition = self.print = None
         # slightly retarded, we first store an empty Score because we need
         # to reference the generated id in other tables at parsing
         self.cursor.execute("INSERT INTO score (genre,key,incipit,year)"
@@ -97,10 +97,24 @@ class Edition(DBItem):
         super().__init__(conn)
         self.year = None
         self.score, self.name = score_id, name
+        self.editors = []
 
     def do_store(self):
         self.cursor.execute("INSERT INTO edition (score, name, year)"
                             "VALUES (?,?,?)", (self.score, self.name, self.year))
+
+
+class Print(DBItem):
+
+    def __init__(self, conn, id):
+        super().__init__(conn)
+        self.partiture = 'N'
+        self.edition = None
+        self.id = id
+
+    def do_store(self):
+        self.cursor.execute("INSERT INTO print (id, partiture, edition)"
+                            "VALUES (?,?,?)", (self.id, self.partiture, self.edition))
 
 
 def main():
@@ -114,6 +128,12 @@ def main():
                 p = Person(conn, c.strip())
                 p.store()
                 conn.execute("INSERT INTO score_author (score, composer) VALUES (?,?)", (score.id, p.id))
+        elif context == 'Editor':  # side-note: there exist Editors w/out Edition(s)
+            for e in data.split(','):
+                p = Person(conn, e.strip())
+                p.store()
+                if score.edition is not None:
+                    score.edition.editors.append(p)
         elif context in ['Genre', 'Key', 'Incipit', 'Composition Year']:
             score.update(context, data)
         elif context.startswith('Voice'):
@@ -134,9 +154,14 @@ def main():
                 score.edition = Edition(conn, data, score.id)
             else:
                 score.edition.name = data
+        elif context == 'Print Number':
+            score.print = Print(conn, int(data))
+        elif context == 'Partiture':
+            if data.startswith('yes'):
+                score.print.partiture = 'P' if re.search(r"partial", data) is not None else 'Y'
 
     conn = sqlite3.connect('scorelib.dat')
-    for table in ['person', 'score', 'score_author', 'voice']:
+    for table in ['person', 'score', 'score_author', 'voice', 'edition', 'edition_author', 'print']:
         conn.cursor().execute("DELETE FROM %s" % table)  # erase tables
 
     f = open('scorelib.txt', 'r')
@@ -145,9 +170,16 @@ def main():
 
     for line in f:
         if not line.strip():  # line empty
+            if score.print is None:  # multiple blank lines (TODO deal w/ better)
+                continue
             score.do_store()
             if score.edition is not None:
                 score.edition.store()
+                for e in score.edition.editors:
+                    conn.execute("INSERT INTO edition_author (edition, editor)"
+                                 "VALUES (?,?)", (score.edition.id, e.id))
+                score.print.edition = score.edition.id
+                score.print.do_store()
             score = Score(conn)  # empty Score created & inserted (generated id)
         m = r.match(line)
         if m is not None:
