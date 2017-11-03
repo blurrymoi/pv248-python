@@ -1,0 +1,210 @@
+[
+    {
+        "number": 1,
+        "name": "Ob\u010dansk\u00e1 demokratick\u00e1 strana",
+        "votes": 572962,
+        "share": 11.32,
+        "color": "#2585d6",
+        "short": "ODS"
+    },
+    {
+        "number": 2,
+        "name": "\u0158\u00e1d n\u00e1roda - Vlasteneck\u00e1 unie",
+        "votes": 8735,
+        "share": 0.17
+    },
+    {
+        "number": 3,
+        "name": "CESTA ODPOV\u011aDN\u00c9 SPOLE\u010cNOSTI",
+        "votes": 3758,
+        "share": 0.07
+    },
+    {
+        "number": 4,
+        "name": "\u010cesk\u00e1 strana soci\u00e1ln\u011b demokratick\u00e1",
+        "votes": 368347,
+        "share": 7.27,
+        "color": "#f38021",
+        "short": "ČSSD"
+    },
+    {
+        "number": 5,
+        "name": "Volte Prav\u00fd Blok-stranu za ODVOLAT.polit.,N\u00cdZK\u00c9 dan\u011b,VYROVN.rozp.,MIN.byrokr.,SPRAV.just.,P\u0158\u00cdMOU demokr. WWW.CIBULKA.NET",
+        "votes": 491,
+        "share": 0
+    },
+    {
+        "number": 6,
+        "name": "Radostn\u00e9 \u010cesko",
+        "votes": 3852,
+        "share": 0.07
+    },
+    {
+        "number": 7,
+        "name": "STAROSTOV\u00c9 A NEZ\u00c1VISL\u00cd",
+        "votes": 262157,
+        "share": 5.18,
+        "color": "#74b9e8",
+        "short": "STAN"
+    },
+    {
+        "number": 8,
+        "name": "Komunistick\u00e1 strana \u010cech a Moravy",
+        "votes": 393100,
+        "share": 7.76,
+        "color": "#f12020",
+        "short": "KSČM"
+    },
+    {
+        "number": 9,
+        "name": "Strana zelen\u00fdch",
+        "votes": 74335,
+        "share": 1.46,
+        "color": "#60b34d",
+        "short": "Zelení"
+    },
+    {
+        "number": 10,
+        "name": "ROZUMN\u00cd - stop migraci a dikt\u00e1tu EU - pen\u00edze na\u0161im ob\u010dan\u016fm, d\u016fchodc\u016fm, d\u011btem, zdravotn\u011b posti\u017een\u00fdm...",
+        "votes": 36528,
+        "share": 0.72
+    },
+    {
+        "number": 11,
+        "name": "Spole\u010dnost proti developersk\u00e9 v\u00fdstavb\u011b v Prokopsk\u00e9m \u00fadol\u00ed",
+        "votes": 438,
+        "share": 0
+    },
+    {
+        "number": 12,
+        "name": "Strana svobodn\u00fdch ob\u010dan\u016f",
+        "votes": 79229,
+        "share": 1.56,
+        "color": "#009682",
+        "short": "Svobodní"
+    },
+    {
+        "number": 13,
+        "name": "Blok proti islamizaci - Obrana domova",
+        "votes": 5077,
+        "share": 0.10
+    },
+    {
+        "number": 14,
+        "name": "Ob\u010dansk\u00e1 demokratick\u00e1 aliance",
+        "votes": 8030,
+        "share": 0.15
+    },
+    {
+        "number": 15,
+        "name": "\u010cesk\u00e1 pir\u00e1tsk\u00e1 strana",
+        "votes": 546393,
+        "share": 10.79,
+        "color": "black",
+        "short": "Piráti"
+    },
+    {
+        "number": 16,
+        "name": "OB\u010cAN\u00c9 2011-SPRAVEDLNOST PRO LIDI",
+        "votes": 359,
+        "share": 0
+    },
+    {
+        "number": 17,
+        "name": "Unie Hrdosti, Aktivity, Vlastenectv\u00ed, Empatie a Lidskosti 2017",
+        "votes": 436,
+        "share": 0
+    },
+    {
+        "number": 18,
+        "name": "\u010cesk\u00e1 n\u00e1rodn\u00ed fronta",
+        "votes": 117,
+        "share": 0
+    },
+    {
+        "number": 19,
+        "name": "Referendum o Evropsk\u00e9 unii",
+        "votes": 4276,
+        "share": 0.08
+    },
+    {
+        "number": 20,
+        "name": "TOP 09",
+        "votes": 268811,
+        "share": 5.31,
+        "color": "#9a58d7",
+        "short": "TOP 09"
+    },
+    {
+        "number": 21,
+        "name": "ANO 2011",
+        "votes": 1500113,
+        "share": 29.64,
+        "color": "#3c2775",
+        "short": "ANO"
+    },
+    {
+        "number": 22,
+        "name": "Dobr\u00e1 volba 2016",
+        "votes": 3722,
+        "share": 0.07
+    },
+    {
+        "number": 23,
+        "name": "Sdru\u017een\u00ed pro republiku - Republik\u00e1nsk\u00e1 strana \u010ceskoslovenska Miroslava Sl\u00e1dka",
+        "votes": 9857,
+        "share": 0.19
+    },
+    {
+        "number": 24,
+        "name": "K\u0159es\u0165ansk\u00e1 a demokratick\u00e1 unie - \u010ceskoslovensk\u00e1 strana lidov\u00e1",
+        "votes": 293643,
+        "share": 5.80,
+        "color": "#c9ae2e",
+        "short": "KDU-ČSL"
+    },
+    {
+        "number": 25,
+        "name": "\u010cesk\u00e1 strana n\u00e1rodn\u011b soci\u00e1ln\u00ed",
+        "votes": 1573,
+        "share": 0.03
+    },
+    {
+        "number": 26,
+        "name": "REALIST\u00c9",
+        "votes": 35995,
+        "share": 0.71
+    },
+    {
+        "number": 27,
+        "name": "SPORTOVCI",
+        "votes": 10593,
+        "share": 0.20
+    },
+    {
+        "number": 28,
+        "name": "D\u011blnick\u00e1 strana soci\u00e1ln\u00ed spravedlnosti",
+        "votes": 10402,
+        "share": 0.20
+    },
+    {
+        "number": 29,
+        "name": "Svoboda a p\u0159\u00edm\u00e1 demokracie - Tomio Okamura (SPD)",
+        "votes": 538574,
+        "share": 10.64,
+        "color": "#c03f2a",
+        "short": "SPD"
+    },
+    {
+        "number": 30,
+        "name": "Strana Pr\u00e1v Ob\u010dan\u016f",
+        "votes": 18556,
+        "share": 0.36
+    },
+    {
+        "number": 31,
+        "name": "N\u00e1rod Sob\u011b",
+        "votes": 300,
+        "share": 0
+    }
+]
