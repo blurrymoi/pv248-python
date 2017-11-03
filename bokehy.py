@@ -40,7 +40,7 @@ l = { 'shares': [],
       'labels': [] }
 
 f = open('election.json', 'r')
-p = figure(x_range=(-1,50))
+#p = figure(x_range=(-1,20))
 sum_below_1 = 0
 for item in sorted(json.load(f), key=lambda x: -x['share']):
     if item['share'] <= 1:
@@ -59,6 +59,8 @@ l['shares'].append(sum_below_1)
 l['colors'].append('gray')
 l['labels'].append("zvyšný bordel")
 
+# BAR CHART #
+'''
 src = ColumnDataSource(data = {
     'x': range(len(l['shares'])),
     'color': l['colors'],
@@ -67,4 +69,34 @@ src = ColumnDataSource(data = {
 
 p.vbar(x='x', top='top', width=0.7,
        color='color', legend='label', source=src)
+show(p)
+'''
+
+# PIE CHART #
+starts = []
+ends = []
+
+current = 0
+for share in l['shares']:
+    starts.append(current*2*pi/100)
+    current += share
+    ends.append(current*2*pi/100)
+ends[-1] = 0
+
+src = ColumnDataSource(data = {
+    'start': starts,
+    'end': ends,
+    'color': l['colors'],
+    'label': l['labels']})
+
+p = figure(x_range=(-1,2))
+p.wedge(x=None, y=None, radius = 1,
+        start_angle = 'start',
+        end_angle = 'end',
+        color = 'color',
+        legend = 'label',
+        source = src,
+        direction = 'anticlock')
+# direction = 'clock', 'anticlock'
+
 show(p)
